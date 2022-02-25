@@ -6,7 +6,7 @@ This program calculates the spin normal modes of a magnetic particle
 
 Those using this code for scientific publications are kindly requested 
 to cite [L. Giovannini et al., Phys. Rev. B 70, 172404 (2004)] and
-[https://github.com/dynamicalmatrix/DMM.git].
+[https://github.com/dynamicalmatrix/DMM].
 
 The theory behind this package has been developed by several authors
 and published in Refs. [1,2]. This code has been written by me and is

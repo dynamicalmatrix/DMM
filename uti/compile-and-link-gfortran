@@ -1,0 +1,7 @@
+# Intel fortran compiler
+
+
+gfortran -c -O3 sort.f
+gfortran -c -O3 dmmtosilo.f
+
+gfortran -o dmmtosilo -O3 dmmtosilo.o -lsilo sort.o 

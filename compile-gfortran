@@ -1,0 +1,15 @@
+# Gnu fortran compiler, gcc and g++
+# 64-bit integer type (necessary for indexing huge arrays, with more than 2^31 
+# elements)
+#
+
+gcc -c -O3 wrap.c
+g++ -c -O3 demag2.cc
+
+gfortran -c -fdefault-integer-8 -O3 String_Utility.f90
+gfortran -c -fdefault-integer-8 -O3 datain.f
+gcc -c -O3 inquiry.c
+
+gfortran -c -fdefault-integer-8 -O3 sort.f
+gfortran -c -fdefault-integer-8 -O3 micro3d.f
+

@@ -1,0 +1,5 @@
+# Gnu fortran compiler, gcc and g++
+#
+
+gfortran -O3 -lstdc++ -o micro3d micro3d.o sort.o wrap.o demag2.o datain.o inquiry.o String_Utility.o -llapack
+

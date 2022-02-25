@@ -1,0 +1,19 @@
+mmdmm 1.0 - Input file template
+- Files
+  <Output filename (absolute path; the directory must exist; if the file exists will be overwritten> <Unformatted (binary) file?>
+  'my-output.dmm'	.F.
+- General parameters of calculation:
+  <Sel=  0: workspace query; 1: full calculation (approx. normalization); 2: full calculation (exact normalization)> <verbosity level 0...3 (0 is the lowest)>
+  1	3
+- Experimental parameters
+  <External magnetic field, Oe> <External field direction w.r. to the x-axis, deg>  <External field direction w.r. to the z-axis, deg>
+  1000.    0.	90.
+- Selection from oommf file
+  <ground state (omf filename)>
+  'test.omf' 'mat-tab.template'
+- Options (various flags)
+  <Lowest frequency of modes to be calculated, GHz> <Highest frequency of modes to be calculated, GHz>
+  0.01	30.
+- Periodic system of magnetic particles:
+  <Periodic boundary conditions; 0: no; 1: yes, along x; 2: yes, along y; 3: yes, bidimensional along x and y> <Components of the Bloch wavevector w.r. to the primitive reciprocal vectors, dimensionless >-0.5, <=0.5 (first BZ)>
+  0 0.5 0.0

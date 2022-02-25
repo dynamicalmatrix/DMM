@@ -1,0 +1,6 @@
+# Intel fortran compiler, gcc and g++, optimized for the present processor.
+
+ifort -c -O3 -prec-div -xHost -Bdynamic -parallel sort.f
+ifort -c -O3 -prec-div -xHost -Bdynamic -parallel dmmtosilo.f
+
+ifort -o dmmtosilo -O5 -prec-div -Bdynamic -parallel dmmtosilo.o -lsilo sort.o 

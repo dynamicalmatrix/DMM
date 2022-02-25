@@ -1,0 +1,13 @@
+dmmtosilo 0.2 - Template
+- Files
+  <Input filename (absolute path; the file must exist> <Unformatted (binary) file?>
+  '../test/my-output.dmm'	.F.
+- General parameters of calculation:
+  <Sel=  1: + frequency calculation; 2: + magnetization profiles; 3: + power spectra> <quality level of calculated magnetization profiles (0: work; 1: reasonably good for both work and final printing; 2: final printing>
+  3	1
+- Frequency range of calculated modes
+  <min frequency, GHz> <max frequency, GHz>
+  0.  15.
+- Periodic array representation
+  <number of unitary cells along x> <number of unitary cells along y>
+  1 1

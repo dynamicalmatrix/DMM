@@ -1,0 +1,14 @@
+<material name> <Saturation magnetization, Oe> <Gyromagnetic ratio, 1/(s Oe)> <Anisotropy coefficient k2p, erg/cm^3> <Hard axis direction w.r. to the ?-axis, deg> <Hard axis direction w.r. to the ?-axis, deg>
+'permalloy'	860.0	1.800E07		0.0	0.0	90.0
+'cobalt'	1400.	1.800E07		0.0	0.0	90.0
+'nickel'	490.0	1.811E07		0.0	0.0	90.0
+'iron'		1700.	1.838E07		0.0	0.0	90.0
+<material name 1> <material name 2>  <Exchange stiffness parameter, erg/cm>
+'cobalt'	'cobalt'	30E-06
+'permalloy'	'permalloy'	1.3E-06
+'cobalt'	'permalloy'	0.0E-06
+'nickel'	'nickel'	0.9E-06
+'iron'		'iron'		2.1E-06
+'permalloy'	'nickel'	1.0E-06
+'permalloy'	'iron'		1.8E-06
+'nickel'	'iron'		1.5E-06

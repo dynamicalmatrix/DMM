@@ -1,0 +1,61 @@
+# MIF 2.1
+# DO NOT NORMALIZE THE MAGNETIZATION! USE (below, in Oxs_TimeDriver) AN INSTRUCTION LIKE:
+# normalize_aveM_output 0
+
+set PI [expr {4*atan(1.)}]
+set MU0 [expr {4*$PI*1e-7}]
+
+Specify Oxs_ImageAtlas:atlas {
+  xrange {0 600e-9}
+  yrange {0 600e-9}
+  zrange {0 20e-9}
+  image face.ppm
+  viewplane xy
+  colormap {
+      white nonmagnetic
+      black magnetic
+  }
+}
+
+Specify Oxs_RectangularMesh:mesh {
+  cellsize {5e-9 5e-9 20e-9}
+  atlas :atlas
+}
+
+Specify Oxs_UniformExchange {
+  A  13E-12
+}
+
+Specify Oxs_Demag {}
+
+Specify Oxs_UZeeman:extfield0 [subst {
+  comment {Field values in Tesla; scale to A/m}
+  multiplier [expr {1/$MU0}]
+  Hrange {
+    {0.1 0 0 0.1 0 0 1}
+  }
+}]
+
+# Evolver
+Specify Oxs_EulerEvolve {
+  gamma_LL 2.95e5
+  alpha 0.5
+}
+
+Specify Oxs_TimeDriver {
+  evolver Oxs_EulerEvolve
+  stopping_dm_dt 1e-7
+  mesh :mesh
+  stage_count 2
+  Ms {Oxs_AtlasScalarField {
+    atlas :atlas
+    values {
+      nonmagnetic  0
+      magnetic     860E3
+  } } }
+  m0 { Oxs_UniformVectorField {
+   norm 1
+   vector {1 0 0.0001}
+  }}
+ normalize_aveM_output 0
+}
